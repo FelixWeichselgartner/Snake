@@ -1,16 +1,21 @@
-
-
+/**
+ * Represents one tile of the board.
+ */
 public class Node {
-    public static final char up = 'u';
-    public static final char down = 'd';
-    public static final char left = 'l';
-    public static final char right = 'r';
-    public static final char noDirection = 'n';
+    /**
+     * constants for the different directions.
+     */
+    public static final char up = 'u', down = 'd', left = 'l', right = 'r', noDirection = 'n';
 
-    private char type;
-    private char direction;
+    /**
+     * attributes for the type and the current direction.
+     */
+    private char type, direction;
 
-    private int thisX, thisY;
+    /**
+     * attributes used for emulating a linked list in C.
+     * instead of pointers to the next body part these are coordinates.
+     */
     private int nextX, nextY;
 
     public int getNextX() {
@@ -35,22 +40,6 @@ public class Node {
 
     public void setDirection(char direction) {
         this.direction = direction;
-    }
-
-    public int getThisX() {
-        return thisX;
-    }
-
-    public void setThisX(int thisX) {
-        this.thisX = thisX;
-    }
-
-    public int getThisY() {
-        return thisY;
-    }
-
-    public void setThisY(int thisY) {
-        this.thisY = thisY;
     }
 
     Node() {
